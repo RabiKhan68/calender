@@ -2,16 +2,15 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
-        name: 'Sien Calender',
-        short_name: 'Calender',
-        description: 'Your personal calender app',
+        name: 'Sien Calendar',
+        short_name: 'Calendar',
+        description: 'Your personal calendar app',
         theme_color: '#ffffff',
         icons: [
           {
