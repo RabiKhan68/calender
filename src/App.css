@@ -115,6 +115,18 @@
 
 /* Events styling already handled in eventPropGetter */
 
+/* Month view day numbers */
+.rbc-date-cell {
+  font-size: 1rem; /* medium size */
+  font-weight: 500; /* optional: make it a bit bolder */
+}
+
+/* Optional: make the header (Sun, Mon, Tue) slightly bigger */
+.rbc-header {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
 /* ===========================
    Responsive
 =========================== */
