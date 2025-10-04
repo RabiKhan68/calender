@@ -14,12 +14,12 @@ export default defineConfig({
         theme_color: '#ffffff',
         icons: [
           {
-            src: '/calender-icon.png',
+            src: '/calendar-icon.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/calender-icon.png',
+            src: '/calendar-icon.png',
             sizes: '512x512',
             type: 'image/png',
           },
