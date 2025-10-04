@@ -1,0 +1,145 @@
+/* ===========================
+   App Layout
+=========================== */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+  min-height: 100vh;
+}
+
+/* Light / Dark Modes */
+.app-container.light {
+  background: #f9fafb; /* gray-50 */
+  color: #1f2937; /* gray-800 */
+}
+
+.app-container.dark {
+  background: #111827; /* gray-900 */
+  color: #f9fafb; /* gray-50 */
+}
+
+/* ===========================
+   Title
+=========================== */
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: inherit;
+}
+
+/* ===========================
+   Controls (Country + Year)
+=========================== */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.controls label {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+/* Dropdown */
+.dropdown, .year-input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.dropdown:focus, .year-input:focus {
+  border-color: #2563eb; /* blue-600 */
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+/* ===========================
+   Calendar
+=========================== */
+.rbc-calendar {
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+}
+
+.dark .rbc-calendar {
+  background: #1f2937; /* gray-800 */
+  color: #f9fafb;
+  border: 1px solid #374151; /* gray-700 */
+}
+
+/* Toolbar buttons (Prev, Next, Today) */
+.rbc-toolbar button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.rbc-toolbar button:hover {
+  background: #1e40af; /* darker blue */
+  transform: translateY(-1px);
+}
+
+.rbc-toolbar button:active {
+  transform: translateY(0);
+}
+
+.rbc-toolbar button.rbc-active {
+  background: #1d4ed8; /* blue-700 */
+}
+
+/* Today highlight (make darker for visibility) */
+.rbc-today {
+  background: rgba(37, 99, 235, 0.2) !important;
+}
+
+/* Events styling already handled in eventPropGetter */
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .dropdown, .year-input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .submit-btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
