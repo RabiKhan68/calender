@@ -2,7 +2,7 @@
    App Layout
 =========================== */
 .app-container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 20px;
   transition: background 0.3s, color 0.3s;
